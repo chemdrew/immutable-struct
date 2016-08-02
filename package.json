@@ -1,0 +1,34 @@
+{
+  "name": "immutable-struct",
+  "version": "0.1.0",
+  "main": "./lib/model.js",
+  "description": "package for creating immutable models, specifically for upholding api contracts (think DTO)",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint",
+    "test": "./node_modules/mocha/bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chemdrew/immutable-struct.git"
+  },
+  "author": "chemdrew <chemdrew1@gmail.com>",
+  "keywords": [
+    "immutable",
+    "model",
+    "dto"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "coveralls": "2.11.12",
+    "eslint": "3.2.0",
+    "istanbul": "0.4.4",
+    "mocha": "2.5.3",
+    "mocha-lcov-reporter": "1.2.0",
+    "pre-commit": "1.1.3",
+    "sinon": "1.17.5"
+  }
+}
